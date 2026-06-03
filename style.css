@@ -945,3 +945,18 @@ footer {
 .about-body p {
   color: var(--ink) !important; /* Memastikan teks panjang berada di kontras tertinggi */
 }
+/* ==========================================================================
+   PENYESUAIAN KONTRAS TINGGI UNTUK SKOR AKSESIBILITAS 100
+   ========================================================================== */
+.achievement-badge {
+  background: #A37F1A !important; /* Menggelapkan warna emas agar tulisan putih di dalamnya lolos audit */
+  color: #FFFFFF !important;
+}
+
+.contact-btn.wa-color {
+  background-color: #128C7E !important; /* Menggunakan hijau WhatsApp versi gelap agar teks putih kontras */
+}
+
+.contact-btn.email-color {
+  background-color: #C5221F !important; /* Menggunakan merah Gmail versi pekat agar teks putih kontras */
+}
