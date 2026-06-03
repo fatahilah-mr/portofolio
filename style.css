@@ -20,8 +20,6 @@
   --gold: #C9A84C;
 }
 
-
-
 html { 
   scroll-behavior: smooth; 
 }
@@ -528,7 +526,7 @@ section {
 .cert-card.pkl-vertical .cert-img-wrap {
   height: auto;
   aspect-ratio: 3 / 4;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .cert-card.pkl-vertical .cert-img-wrap img {
@@ -610,7 +608,7 @@ section {
 }
 
 /* ==========================================================================
-   OPTIMASI TOMBOL GOOGLE DRIVE (CENTERED & RESPONSIVE)
+   OPTIMASI TOMBOL GOOGLE DRIVE (KONTRAS TINGGI WCAG)
    ========================================================================== */
 .cert-drive-btn {
   display: flex;
@@ -622,7 +620,7 @@ section {
   margin: 3.5rem auto 0 auto;
   padding: 0.8rem 1.2rem;
   background-color: transparent;
-  color: var(--accent);
+  color: var(--ink-soft); /* Diubah ke warna pekat agar teks luar border lolos audit */
   border: 2px solid var(--accent);
   border-radius: 6px;
   font-family: 'DM Sans', sans-serif;
@@ -928,4 +926,22 @@ footer {
     width: 16px;
     height: 16px;
   }
+}
+
+/* ==========================================================================
+   KUNCI KHUSUS AUDIT AKSESIBILITAS (WCAG CONTRAST INJECTION)
+   ========================================================================== */
+.skill-list li {
+  color: var(--ink-soft) !important;
+}
+
+.cert-year, 
+.meta-card-label, 
+.overlay-title {
+  color: var(--ink-soft) !important; /* Menaikkan kepekatan elemen teks sekunder */
+}
+
+.project-desc, 
+.about-body p {
+  color: var(--ink) !important; /* Memastikan teks panjang berada di kontras tertinggi */
 }
