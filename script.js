@@ -29,25 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==========================================
-  // 2. LOGIKA SMART HIDDEN NAVBAR ON SCROLL
+  // 2. LOGIKA SMART HIDDEN NAVBAR ON SCROLL (OPTIMIZED FOR MOBILE)
   // ==========================================
   let lastScrollTop = 0;
   const navbar = document.getElementById('main-nav');
+  let isScrolling = false;
 
   if (navbar) {
     window.addEventListener('scroll', function() {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      
-      if (currentScroll > 80) {
-        if (currentScroll > lastScrollTop) {
-          navbar.classList.add('nav-hidden');
-        } else {
-          navbar.classList.remove('nav-hidden');
-        }
-      } else {
-        navbar.classList.remove('nav-hidden');
+      if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+          let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          
+          if (currentScroll > 80) {
+            if (currentScroll > lastScrollTop) {
+              navbar.classList.add('nav-hidden');
+            } else {
+              navbar.classList.remove('nav-hidden');
+            }
+          } else {
+            navbar.classList.remove('nav-hidden');
+          }
+          
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+          isScrolling = false;
+        });
+
+        isScrolling = true;
       }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, false);
   }
 
@@ -59,22 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModal = document.getElementById("closeModal");
 
   if (modal && modalImg && closeModal) {
-    // Tangkap klik tombol transkrip
     document.querySelectorAll(".btn-transkrip").forEach(button => {
       button.addEventListener("click", function() {
         const targetImageSrc = this.getAttribute("data-fullimg");
-        modalImg.src = targetImageSrc; // Download gambar on-demand
+        modalImg.src = targetImageSrc;
         modal.classList.add("show");
       });
     });
 
-    // Tutup klik tombol silang (X)
     closeModal.addEventListener("click", () => {
       modal.classList.remove("show");
       setTimeout(() => { modalImg.src = ""; }, 300); 
     });
 
-    // Tutup klik area luar gambar
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
         modal.classList.remove("show");
@@ -82,9 +88,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Taruh semua inisialisasi menu dan event listener di sini
-    // Ini mencegah skrip berjalan sebelum DOM siap dan mengurangi layout thrashing
 });
