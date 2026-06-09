@@ -22,6 +22,7 @@ Website ini sudah live dan bisa diakses di: [fatahilah-portofolio.vercel.app](ht
 * Halaman Khusus Semua Sertifikat: Selain menampilkan sertifikat utama di halaman depan, website ini dilengkapi halaman khusus (`certificates.html`) untuk mengarsipkan seluruh koleksi sertifikat secara rapi tanpa membebani halaman utama.
 * Kategori Skill yang Jelas: Keahlian teknis saya bagi menjadi 4 kotak visual yang interaktif (Hardware, Cisco, MikroTik, dan Server) lengkap dengan warna tema pembeda di setiap kotaknya.
 * Navbar Pintar: Navigasi atasnya sengaja dibuat peka terhadap gerakan scroll. Menu akan otomatis sembunyi secara halus saat layar digulir ke bawah (biar space membaca luas), dan muncul lagi saat layar digulir ke atas.
+* **CMS Sertifikat dengan Google Sheets + GitHub:** Semua data sertifikat (nama, penerbit, tahun, tipe, URL gambar depan/belakang) dikelola melalui Google Sheets. Gambar sertifikat disimpan di repositori GitHub dan diakses via CDN jsDelivr untuk loading cepat di seluruh dunia. Cukup edit spreadsheet, galeri sertifikat di halaman `certificates.html` akan otomatis berubah tanpa perlu menyentuh kode.
 
 ---
 
@@ -32,9 +33,10 @@ Biar kodenya rapi dan sesuai dengan standar coding yang baik, proyek ini dibagi 
 2. `certificates.html` — Halaman khusus galeri arsip digital untuk semua sertifikat yang saya miliki.
 3. `style.css` — Lembar gaya CSS utama yang mengontrol estetika dan responsivitas kedua halaman HTML.
 4. `script.js` — Logika JavaScript (Vanilla JS) untuk menu hamburger, efek scroll navbar, dan modal pop-up.
-5. `vercel.json` — Konfigurasi server Vercel untuk optimasi header `Cache-Control` pada aset statis.
-6. `sitemap.xml` & `robots.txt` — File konfigurasi SEO untuk membantu indexing mesin pencari seperti Google.
-7. `assets/` — Folder khusus tempat penyimpanan seluruh file gambar profil, topologi, dan sertifikat agar manajemen aset tetap rapi.
+5. `cms-certificates.js` — Pengambilan data sertifikat dari Google Sheets (API gviz) dan render dinamis ke dalam grid. Mendukung lazy loading gambar, fallback placeholder, serta modal transkrip on-demand. Gambar diambil dari repositori GitHub dan dioptimasi dengan jsDelivr.
+6. `vercel.json` — Konfigurasi server Vercel untuk optimasi header `Cache-Control` pada aset statis.
+7. `sitemap.xml` & `robots.txt` — File konfigurasi SEO untuk membantu indexing mesin pencari seperti Google.
+8. `assets/` — Folder khusus tempat penyimpanan seluruh file gambar profil, topologi, dan sertifikat agar manajemen aset tetap rapi.
 
 ---
 
