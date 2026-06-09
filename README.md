@@ -17,11 +17,11 @@ Website ini sudah live dan bisa diakses di: [fatahilah-portofolio.vercel.app](ht
 * **Manajemen Cache Tingkat Lanjut:** Konfigurasi khusus melalui `vercel.json` untuk menerapkan cache jangka panjang (`immutable`) pada aset statis guna mempercepat kunjungan berulang (subsequent visits).
 * **Siap SEO & Aksesibilitas:** Dilengkapi dengan struktur HTML5 Semantik yang ramah *screen reader*, file `sitemap.xml`, `robots.txt`, dan optimasi *Meta Tags* untuk mesin pencari.
 
-* Desain Simpel & Nyaman di Mata: Menggunakan kombinasi warna krem, hitam tinta, dan biru aksen yang minimalis. Tujuannya agar HRD atau klien bisa betah membaca profil saya tanpa terganggu visual yang ramai.
-* Responsif (Bagus di HP & Laptop): Kalau dibuka lewat HP, menunya otomatis berubah jadi gaya tirai ramping yang hemat tempat. Kalau dibuka di laptop, tampilannya melebar dengan rapi memanfaatkan sistem grid desktop.
-* Halaman Khusus Semua Sertifikat: Selain menampilkan sertifikat utama di halaman depan, website ini dilengkapi halaman khusus (`certificates.html`) untuk mengarsipkan seluruh koleksi sertifikat secara rapi tanpa membebani halaman utama.
-* Kategori Skill yang Jelas: Keahlian teknis saya bagi menjadi 4 kotak visual yang interaktif (Hardware, Cisco, MikroTik, dan Server) lengkap dengan warna tema pembeda di setiap kotaknya.
-* Navbar Pintar: Navigasi atasnya sengaja dibuat peka terhadap gerakan scroll. Menu akan otomatis sembunyi secara halus saat layar digulir ke bawah (biar space membaca luas), dan muncul lagi saat layar digulir ke atas.
+* **Desain Simpel & Nyaman di Mata:** Menggunakan kombinasi warna krem, hitam tinta, dan biru aksen yang minimalis. Tujuannya agar HRD atau klien bisa betah membaca profil saya tanpa terganggu visual yang ramai.
+* **Responsif (Bagus di HP & Laptop):** Kalau dibuka lewat HP, menunya otomatis berubah jadi gaya tirai ramping yang hemat tempat. Kalau dibuka di laptop, tampilannya melebar dengan rapi memanfaatkan sistem grid desktop.
+* **Halaman Khusus Semua Sertifikat:** Selain menampilkan sertifikat utama di halaman depan, website ini dilengkapi halaman khusus (`certificates.html`) untuk mengarsipkan seluruh koleksi sertifikat secara rapi tanpa membebani halaman utama.
+* **Kategori Skill yang Jelas:** Keahlian teknis saya bagi menjadi 4 kotak visual yang interaktif (Hardware, Cisco, MikroTik, dan Server) lengkap dengan warna tema pembeda di setiap kotaknya.
+* **Navbar Pintar:** Navigasi atasnya sengaja dibuat peka terhadap gerakan scroll. Menu akan otomatis sembunyi secara halus saat layar digulir ke bawah (biar space membaca luas), dan muncul lagi saat layar digulir ke atas.
 * **CMS Sertifikat dengan Google Sheets + GitHub:** Semua data sertifikat (nama, penerbit, tahun, tipe, URL gambar depan/belakang) dikelola melalui Google Sheets. Gambar sertifikat disimpan di repositori GitHub dan diakses via CDN jsDelivr untuk loading cepat di seluruh dunia. Cukup edit spreadsheet, galeri sertifikat di halaman `certificates.html` akan otomatis berubah tanpa perlu menyentuh kode.
 
 ---
